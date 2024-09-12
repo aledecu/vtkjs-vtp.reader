@@ -1,0 +1,38 @@
+{
+  "name": "mri",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cjson": "node get_name_files.js",
+    "build": "webpack --config webpack.config.js --mode=production",
+    "dev": "webpack --mode=development",
+    "build2": "webpack --progress --mode=development",
+    "start": "webpack serve --progress --mode=development --static=dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@kitware/vtk.js": "^30.5.1",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
+    "mammoth": "^1.8.0",
+    "textract": "^2.5.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "html-loader": "^5.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "postcss-loader": "^8.1.1",
+    "sass": "^1.77.3",
+    "sass-loader": "^14.2.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}

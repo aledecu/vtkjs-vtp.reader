@@ -1,0 +1,324 @@
+#controlPanel {
+    width: 20%;
+
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #fcaaaa;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    overflow-y: auto;
+    overflow: scroll;
+    overflow-x: hidden;
+    }
+
+    .titulo_paneles{
+      background-color: #e47676; /* Cambia el color de fondo al deseado (aquí, un gris claro) */
+      padding: 7px; /* Añade un padding para dar espacio interno */
+      text-align: center; /* Centra el texto dentro del div */
+    }
+
+    #container {
+    width: 85%;
+    height: 100%;
+    box-sizing: border-box;
+    }
+    .control-element {
+    margin-bottom: 10px;
+    width: 100%;
+    }
+    .control-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    }
+    .control-group label {
+  margin-right: 10px;
+  flex: 1;
+}
+.control-group input[type="range"] {
+  flex: 3;
+  width: 90%;
+}
+.control-group input[type="checkbox"] {
+  margin-left: 10px;
+}
+    .separator {
+    border: 0;
+    height: 2px;
+    background: #2e0000;
+    margin: 10px 0;
+    width: 100%;
+    }
+
+    .button-group {
+    display: flex;
+    flex-direction: column;
+    }
+    .button-group button {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #cf1212;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+
+    .list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    }
+    .list-item input[type="checkbox"] {
+    margin-right: 10px; /* Adds space between checkboxes */
+    }
+    .list-item label {
+    margin-left: 10px;
+    margin-right: 10px; /* Adds space between checkboxes */
+    }
+
+
+    #footer {
+  width: 100%;
+  height: 40px; /* Adjust the height as needed */
+  padding: 10px;
+  background-color: #343a40;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    #portraitWarning {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    text-align: center;
+    z-index: 1000;
+    }
+    @keyframes rotatePhone {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+    }
+
+    .bottom-image-container {
+    margin-top: auto; /* Pushes the image container to the bottom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .bottom-image-container img {
+    max-width: 100%;
+    height: auto;
+    }
+
+    .collapsible {
+  background-color: #631d1d;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+}
+.collapsible:after {
+  content: '\002B'; /* Unicode character for "plus" sign (+) */
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.collapsible.active:after {
+  content: "\2212"; /* Unicode character for "minus" sign (−) */
+}
+.content {
+  padding: 0 10px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+
+/* Estilos generales para el contenedor externo */
+.outer-container {
+width: 100%; /* Ajusta según sea necesario */
+padding: 20px;
+background-color: #f0f0f0;
+}
+
+/* Estilos para la lista de checkboxes */
+.checkbox-list {
+list-style: none; /* Eliminar los puntos de la lista */
+padding: 0;
+margin: 0;
+}
+
+/* Estilos para cada elemento de la lista */
+.checkbox-item {
+margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+}
+
+/* Estilos para el label */
+.checkbox-label {
+display: flex;
+align-items: center; /* Centra verticalmente */
+justify-content: space-between; /* Asegura que los elementos dentro del label estén separados */
+width: 100%; /* Asegura que el label ocupe todo el ancho disponible */
+}
+
+/* Estilos para el texto */
+.text {
+flex-grow: 1; /* Permite que el texto ocupe el espacio disponible */
+text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Estilos para el checkbox */
+.checkbox {
+margin-left: auto; /* Empuja el checkbox al final del contenedor del label */
+}
+
+
+/* Estilo de radio button*/
+
+
+/* Estilo personalizado para los radio buttons cuando están seleccionados */
+.form-check-input:checked {
+    background-color: #5a0505; /* Color de fondo cuando está seleccionado */
+    border-color: #000000; /* Color del borde cuando está seleccionado */
+  }
+  
+  /* Estilo del borde de los radio buttons cuando no están seleccionados */
+  .form-check-input {
+    border-color: rgb(0, 0, 0); /* Color del borde cuando no está seleccionado */
+    margin-right: 5px; /* Espacio entre el radio button y el texto */
+  }
+  
+  /* Cambia el color del texto de las etiquetas */
+  .form-check-label {
+    color: rgb(0, 0, 0); /* Cambia el color del texto a blanco */
+  }
+
+
+  /* Estilo para cambiar Volumen Viewer
+
+  /* Personalización de los checkboxes */
+
+  /* Personalización de los sliders (ranges) */
+/* Personalización de todos los checkboxes */
+.form-check-input,
+#orthographic_camera,
+#chb_invertir_sagital,
+#chb_invertir_transversal,
+#chb_invertir_coronal {
+  accent-color: #5a0505; /* Cambia el color del checkbox seleccionado */
+}
+
+/* Cambia el color del texto asociado con todos los checkboxes */
+.form-check-label,
+label[for="orthographic_camera"],
+label[for="chb_invertir_sagital"],
+label[for="chb_invertir_transversal"],
+label[for="chb_invertir_coronal"] {
+  color: rgb(0, 0, 0); /* Cambia el color del texto a blanco */
+}
+
+/* Personalización de todos los sliders (ranges) */
+.custom-range,
+.sliceI, .sliceJ, .sliceK, .colorLevel, .colorWindow,
+#originRange_sagital,
+#originRange_transversal,
+#originRange_coronal {
+  -webkit-appearance: none; /* Elimina el estilo predeterminado del navegador para los sliders */
+  width: 100%; /* Asegura que el slider ocupe el 100% del ancho disponible */
+  height: 8px; /* Altura del slider */
+  background: #aa6f6f; /* Color de fondo del slider */
+  outline: none; /* Elimina el borde predeterminado */
+  opacity: 0.9; /* Opacidad para un efecto suave */
+  transition: opacity 0.2s; /* Transición suave para la opacidad */
+  border-radius: 5px; /* Bordes redondeados para el slider */
+}
+
+.custom-range::-webkit-slider-thumb,
+.sliceI::-webkit-slider-thumb,
+.sliceJ::-webkit-slider-thumb,
+.sliceK::-webkit-slider-thumb,
+.colorLevel::-webkit-slider-thumb,
+.colorWindow::-webkit-slider-thumb,
+#originRange_sagital::-webkit-slider-thumb,
+#originRange_transversal::-webkit-slider-thumb,
+#originRange_coronal::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Elimina el estilo predeterminado del navegador para el "thumb" */
+  width: 16px; /* Ancho del "thumb" */
+  height: 16px; /* Altura del "thumb" */
+  background: #5a0505; /* Color del "thumb" */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el "thumb" */
+  border-radius: 50%; /* Hace que el "thumb" sea redondo */
+}
+
+.custom-range::-moz-range-thumb,
+.sliceI::-moz-range-thumb,
+.sliceJ::-moz-range-thumb,
+.sliceK::-moz-range-thumb,
+.colorLevel::-moz-range-thumb,
+.colorWindow::-moz-range-thumb,
+#originRange_sagital::-moz-range-thumb,
+#originRange_transversal::-moz-range-thumb,
+#originRange_coronal::-moz-range-thumb {
+  width: 16px; /* Ancho del "thumb" */
+  height: 16px; /* Altura del "thumb" */
+  background: #5a0505; /* Color del "thumb" */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el "thumb" */
+  border-radius: 50%; /* Hace que el "thumb" sea redondo */
+}
+
+// Checkbox global de estrucutras 
+
+/* Estilos para el contenedor del checkbox */
+.checkbox-item-global {
+  margin: 0px 0; /* Margen superior e inferior */
+  padding: 3px; /* Padding alrededor del contenedor */
+  background-color: #ebcaca; /* Color de fondo del panel */
+  border-radius: 6px; /* Bordes redondeados para un efecto más suave */
+  display: flex; /* Alinea el contenido en línea */
+  align-items: center; /* Centra el contenido verticalmente */
+}
+
+/* Estilos para el label del checkbox */
+.checkbox-label {
+  width: 100%; /* Asegura que el label ocupe todo el ancho del contenedor */
+  cursor: pointer; /* Cambia el cursor al estilo de puntero cuando se pasa sobre el label */
+  display: flex; /* Alinea el checkbox y el texto en línea */
+  align-items: center; /* Centra el checkbox y el texto verticalmente */
+  padding: 5px; /* Padding dentro del label */
+  background-color: inherit; /* Hereda el color de fondo del contenedor */
+}
+
+/* Estilo del checkbox */
+.checkbox-label input[type="checkbox"] {
+  margin-right: 10px; /* Espacio entre el checkbox y el texto */
+}
+

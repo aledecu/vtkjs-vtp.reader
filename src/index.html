@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <title>Plantilla VTKjs</title>
+    <style>
+        body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        }
+        #main {
+        display: flex;
+        flex: 1;
+        width: 100%;
+        height: calc(100% - 100px); /* Adjust according to header and footer height */
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <div  id="header">
+      <a href="https://3dviewer.lavis.unam.mx/" target="_blank">
+        <img src="./images/logo_3dviewer_white.png" alt="Logo">
+      </a>
+      <h1>PLANTILLA PARA VTKJS</h1>
+
+
+
+    </div>
+    
+
+      <div id="main">
+        
+        <div id="controlPanel">
+
+            <button id="loadVTPButton">Cargar Estructura Sola</button>
+
+            <label><input type="checkbox" id="chk_estructura_1" checked> Estructura 1</label><br>
+            <label><input type="checkbox" id="chk_estructura_2" checked> Estructura 2</label><br>
+            <label><input type="checkbox" id="chk_estructura_3" checked> Estructura 3</label><br>
+
+        </div>
+
+        <div id="container"></div>
+ 
+      </div>
+
+
+
+      <div id="footer">
+        <p>Esta es una platilla para aprender a utilizar vtkjs</p>
+      </div>
+
+
+  <script>
+
+  </script>
+
+</body>
+</html>

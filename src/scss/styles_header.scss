@@ -1,0 +1,41 @@
+#header {
+    display: flex; /* Flexbox para organizar los elementos en fila */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    justify-content: space-between; /* Espacia los elementos entre sí */
+    padding: 10px 20px; /* Espaciado interno del header */
+    background-color: #343a40;
+    color: white;
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+/* Logo en el extremo izquierdo */
+#header > a img {
+    height: 50px; /* Ajusta la altura máxima del logo */
+    width: auto; /* Mantiene la proporción del logo */
+    max-width: 150px; /* Define un ancho máximo si es necesario */
+}
+
+/* Título centrado */
+#header > h1 {
+    flex-grow: 1; /* Permite que el título crezca para ocupar el espacio restante */
+    text-align: center; /* Centra el texto dentro de su contenedor */
+    margin: 0; /* Elimina márgenes por defecto */
+    font-size: 24px; /* Tamaño de fuente del título */
+    font-family: Arial, Helvetica, sans-serif; /* Alternativa: Roboto, sans-serif */
+    font-weight: bold; /* Hace el texto más destacado */
+    color: #ffffff; /* Color de texto más oscuro para mejor legibilidad */
+}
+
+/* Contenedor de imágenes en el extremo derecho */
+.colaboradores {
+    display: flex; /* Flexbox para organizar las imágenes en fila */
+    gap: 30px; /* Espacio entre las imágenes */
+    margin-right: 30px; /* Añade espacio entre las imágenes y el margen derecho */
+}
+
+.colaboradores img {
+    height: 40px; /* Ajusta la altura de las imágenes */
+    width: auto; /* Mantiene la proporción de las imágenes */
+    object-fit: contain; /* Asegura que las imágenes mantengan su aspecto original */
+}
